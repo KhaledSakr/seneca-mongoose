@@ -1,10 +1,16 @@
 {
   "name": "seneca-mongoose",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Mongoose storage layer for Seneca framework",
-  "main": "mongoose-store.js",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "lab -e development -a chai -t 100 -L -v",
+    "test-cov-html": "lab -a code -r html -o coverage.html -L"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm test"
+    }
   },
   "keywords": [
     "seneca",
@@ -16,14 +22,32 @@
     "plugin"
   ],
   "author": "Steven Ceuppens",
+  "contributors": [
+    {
+      "name": "Felipe Barros Cruz",
+      "email": "felipe.barros.pt@gmail.com",
+      "url": "https://github.com/felipebarroscruz"
+    }
+  ],
   "license": "MIT",
   "engines": {
     "node": ">=5.0.0"
   },
   "files": [
-    "mongoose-store.js"
+    "index.js"
   ],
   "dependencies": {
-    "mongoose": "^4.6.1"
+    "husky": "^0.15.0-rc.9",
+    "joi": "^13.1.2",
+    "mongoose": "^5.0.10"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "eslint": "^4.18.2",
+    "eslint-config-seneca": "^3.0.0",
+    "eslint-plugin-hapi": "^4.1.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "lab": "^15.4.0",
+    "seneca": "^3.4.3"
   }
 }
