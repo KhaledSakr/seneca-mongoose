@@ -14,7 +14,7 @@ npm install seneca-mongoose
 ## Plugin Interface
 
 ```javascript
-seneca.seraph
+seneca.mongoose
 ```
  - Methods and properties list [here](http://mongoosejs.com/docs/index.html)
 
