@@ -53,24 +53,35 @@ describe('seneca-mongoose', function () {
 
   it('Expect to have a valid seneca instance', () => {
     return new Promise((resolve, reject) => {
-      createSenecaInstance(Mock.valid).then((instance) => {
-        senecaInstance = instance
-        resolve(null)
-      })
+      createSenecaInstance(Mock.valid)
+        .then((instance) => {
+          senecaInstance = instance
+          resolve(null)
+        })
+        .catch(reject)
     })
   })
 
   it('Expect to have valid seneca instance', () => {
     return new Promise((resolve, reject) => {
-      createSenecaInstance(Mock.valid).then((instance) => {
-        senecaInstance = instance
-        resolve(null)
-      })
+      createSenecaInstance(Mock.valid)
+        .then((instance) => {
+          senecaInstance = instance
+          resolve(null)
+        })
     })
   })
 
   it('Expect to have mongoose instance', () => {
-    expect(senecaInstance.mongoose).not.equal(undefined)
+    return new Promise((resolve, reject) => {
+      const connection = senecaInstance.mongoose
+      connection
+        .then((instance) => {
+          expect(instance.constructor.name).to.be.equal('Mongoose')
+          resolve(null)
+        })
+        .catch(reject)
+    })
   })
 
   it('Expect to define a new model', () => {
