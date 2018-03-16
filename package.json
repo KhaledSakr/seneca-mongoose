@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "lab -e development -a chai -t 100 -L -v",
-    "test-cov-html": "lab -a code -r html -o coverage.html -L"
+    "test-cov-html": "lab -a chai -r html -o coverage.html -L"
   },
   "husky": {
     "hooks": {
