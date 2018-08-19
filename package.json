@@ -4,7 +4,7 @@
   "description": "Mongoose storage layer for Seneca framework",
   "main": "index.js",
   "scripts": {
-    "test": "lab -e development -a chai -t 100 -L -v",
+    "test": "lab -e development -a chai -t 100 -L -v -l",
     "test-cov-html": "lab -a chai -r html -o coverage.html -L"
   },
   "husky": {
