@@ -76,7 +76,7 @@ module.exports = function Senegoose (params) {
           .description('the option to set the maximum entries of buffer')
       }).optional()
     }
-    return Joi.validate(params, schema, { abortEarly: false })
+    return Joi.validate(params, schema, { abortEarly: false, allowUnknown: true })
   }
 
   return {
