@@ -8,9 +8,9 @@
  */
 
 
-module.exports = function SenecaMongoose (params) {
+module.exports = function Senegoose (params) {
   const seneca = this
-  const name = 'seneca-mongoose'
+  const name = 'senegoose'
   const Mongoose = require('mongoose')
   const Joi = require('joi')
   const DEFAULT_PARAMS = {

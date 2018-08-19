@@ -1,13 +1,14 @@
-# seneca-mongoose
+# senegoose
 ![node](https://img.shields.io/badge/node-v8.9.0-brightgreen.svg) ![npm](https://img.shields.io/badge/npm-v5.6.1-blue.svg) ![yarn](https://img.shields.io/badge/yarn-v1.3.2-blue.svg)  ![coverage](https://img.shields.io/badge/coverage-100%25-green.svg) ![tests](https://img.shields.io/badge/tests-8%2F8-green.svg)
 
 ## About
 Mongoose storage layer for Seneca framework
+It's a fork of https://github.com/stevenceuppens/seneca-mongoose
 
 ## Install
 
 ```
-npm install seneca-mongoose
+npm install senegoose
 ```
 
 ## Options
@@ -16,7 +17,7 @@ npm install seneca-mongoose
 ## Plugin Interface
 
 ```javascript
-seneca.mongoose
+senegoose
 ```
  - Methods and properties list [here](http://mongoosejs.com/docs/index.html)
 
@@ -25,9 +26,9 @@ seneca.mongoose
 ```javascript
 const Seneca = require('Seneca')
 const Mongoose = require('mongoose')
-const SenecaMongoose = require('seneca-mongoose')
+const Senegoose = require('senegoose')
 const seneca = Seneca()
-  .use(SenecaMongoose, {
+  .use(Senegoose, {
     uri: 'mongodb://localhost/test',
     options: {
       autoIndex: true,
